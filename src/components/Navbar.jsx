@@ -5,6 +5,9 @@ import {
   Wallet,
   ChartPie,
   CreditCard,
+  HandCoins,
+  ChartLine,
+  Settings,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -62,6 +65,38 @@ const Navbar = () => {
             >
               <ArrowLeftRight />
               Transaksi
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="p-5 text-[0.9rem]">
+        <div className="text-slate-400 uppercase">Akaun</div>
+        <ul className="my-3 space-y-3">
+          <li>
+            <a
+              href="#"
+              className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
+            >
+              <HandCoins />
+              Simpanan
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
+            >
+              <ChartLine />
+              Pelaburan
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
+            >
+              <Settings />
+              Tetapan
             </a>
           </li>
         </ul>
