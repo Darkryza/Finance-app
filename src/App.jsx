@@ -5,12 +5,13 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen w-full bg-slate-950 text-white">
+      <div className="flex h-screen w-full bg-slate-950 text-white">
         <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-        </Routes>
+        <main className="flex-1 overflow-auto">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   );
