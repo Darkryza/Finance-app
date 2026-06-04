@@ -37,7 +37,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <CreditCard />
-              Transaksi
+              Transaction
             </a>
           </li>
           <li>
@@ -46,7 +46,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <Wallet />
-              Bajet
+              Budget
             </a>
           </li>
           <li>
@@ -55,7 +55,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <ChartPie />
-              Laporan
+              Report
             </a>
           </li>
           <li>
@@ -64,13 +64,13 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <ArrowLeftRight />
-              Transaksi
+              Transfer
             </a>
           </li>
         </ul>
       </div>
       <div className="p-5 text-[0.9rem]">
-        <div className="text-slate-400 uppercase">Akaun</div>
+        <div className="text-slate-400 uppercase">Account</div>
         <ul className="my-3 space-y-3">
           <li>
             <a
@@ -78,7 +78,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <HandCoins />
-              Simpanan
+              Saving
             </a>
           </li>
           <li>
@@ -87,7 +87,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <ChartLine />
-              Pelaburan
+              Investment
             </a>
           </li>
           <li>
@@ -96,7 +96,7 @@ const Navbar = () => {
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <Settings />
-              Tetapan
+              Setting
             </a>
           </li>
         </ul>
