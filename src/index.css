@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: var(--color-slate-950);
+  --color-secondary: #1e293b;
+  --color-bluePrimary: var(--color-blue-500);
+  --color-text: var(--color-slate-400);
+}

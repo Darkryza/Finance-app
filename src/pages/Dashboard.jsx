@@ -1,9 +1,18 @@
-import { Calendar } from "lucide-react";
+import {
+  ArrowUpRight,
+  Calendar,
+  TrendingUp,
+  Wallet,
+  HandCoins,
+  BanknoteArrowDown,
+  TrendingDown,
+  ArrowDownRight,
+} from "lucide-react";
 
 const Dashboard = () => {
   return (
-    <div className="text-slate-400">
-      <div className="flex px-8 py-10">
+    <div className="text-slate-400 px-8 pt-10">
+      <div className="flex pb-5">
         <div>
           <div className="flex justify-center items-center">
             <span className="text-4xl font-bold text-white">Dashboard</span>
@@ -19,6 +28,92 @@ const Dashboard = () => {
           <button className="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-xl bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition duration-100">
             + Add Transaction
           </button>
+        </div>
+      </div>
+      <div className="flex gap-5">
+        {/* Card Jumlah Baki */}
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+          {/* Symbol first row */}
+          <div className="flex justify-between">
+            <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
+              <Wallet className="text-bluePrimary" />
+            </div>
+            <div className="flex justify-center items-center">
+              <TrendingUp className="text-bluePrimary w-20" size={50} />
+            </div>
+          </div>
+          {/* Jumlah baki */}
+          <div className="mt-5">
+            <div className="text-text text-sm">Jumlah baki</div>
+          </div>
+          {/* Baki */}
+          <div className="text-white font-bold text-2xl mb-2">RM24,830</div>
+          {/* Peratusan */}
+          <div className="flex gap-2">
+            <div className="flex justify-center items-center">
+              <ArrowUpRight className="text-green-500" />
+            </div>
+            <div className="text-green-500 flex justify-center items-center">
+              +2.4%
+            </div>
+            <div className="text-slate-500">vs bulan lalu</div>
+          </div>
+        </div>
+        {/* Card Pendapatan */}
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+          {/* Symbol first row */}
+          <div className="flex justify-between">
+            <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
+              <HandCoins className="text-green-500" />
+            </div>
+            <div className="flex justify-center items-center">
+              <TrendingUp className="text-green-500 w-20" size={50} />
+            </div>
+          </div>
+          {/* Jumlah baki */}
+          <div className="mt-5">
+            <div className="text-text text-sm">Pendapatan</div>
+          </div>
+          {/* Baki */}
+          <div className="text-white font-bold text-2xl mb-2">RM8,240</div>
+          {/* Peratusan */}
+          <div className="flex gap-2">
+            <div className="flex justify-center items-center">
+              <ArrowUpRight className="text-green-500" />
+            </div>
+            <div className="text-green-500 flex justify-center items-center">
+              +5.1%
+            </div>
+            <div className="text-slate-500">vs bulan lalu</div>
+          </div>
+        </div>
+        {/* Card Perbelanjaan */}
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+          {/* Symbol first row */}
+          <div className="flex justify-between">
+            <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
+              <BanknoteArrowDown className="text-red-500" />
+            </div>
+            <div className="flex justify-center items-center">
+              <TrendingDown className="text-red-500 w-20" size={50} />
+            </div>
+          </div>
+          {/* Jumlah baki */}
+          <div className="mt-5">
+            <div className="text-text text-sm">Perbelanjaan</div>
+          </div>
+          {/* Baki */}
+          <div className="text-white font-bold text-2xl mb-2">RM3,590</div>
+          {/* Peratusan */}
+          <div className="flex gap-2">
+            <div className="flex justify-center items-center">
+              <ArrowDownRight className="text-red-500" />
+            </div>
+            <div className="text-red-500 flex justify-center items-center">
+              -1.8%
+            </div>
+            <div className="text-slate-500">vs bulan lalu</div>
+          </div>
         </div>
       </div>
     </div>
