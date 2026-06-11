@@ -8,10 +8,28 @@ import {
   TrendingDown,
   ArrowDownRight,
 } from "lucide-react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
+const data = [
+  { month: "Jan", pendapatan: 5200, perbelanjaan: 3100 },
+  { month: "Feb", pendapatan: 6100, perbelanjaan: 3800 },
+  { month: "Mac", pendapatan: 5800, perbelanjaan: 3200 },
+  { month: "Apr", pendapatan: 7200, perbelanjaan: 4100 },
+  { month: "Mei", pendapatan: 6900, perbelanjaan: 3700 },
+  { month: "Jun", pendapatan: 8240, perbelanjaan: 3590 },
+];
 
 const Dashboard = () => {
   return (
-    <div className="text-slate-400 px-8 pt-10">
+    <div className="text-slate-400 px-8 pt-10 flex flex-col">
+      {/* Dashboard atas */}
       <div className="flex pb-5">
         <div>
           <div className="flex justify-center items-center">
@@ -30,7 +48,8 @@ const Dashboard = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-5">
+      {/* card first layer */}
+      <div className="flex gap-5 pb-5">
         {/* Card Jumlah Baki */}
         <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
           {/* Symbol first row */}
@@ -115,6 +134,64 @@ const Dashboard = () => {
             <div className="text-slate-500">vs bulan lalu</div>
           </div>
         </div>
+      </div>
+      {/* card second layer */}
+      <div className="flex gap-5 pb-5">
+        {/* Aliran kewangan */}
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+          {/* Top */}
+          <div className="flex items-center gap-3">
+            {/* Title: Aliran Kewangan */}
+            <h1 className="text-white font-bold">Aliran Kewangan</h1>
+            {/* List button ikut hari bulan minggu */}
+            <ul className="flex gap-3 bg-primary px-3 py-2 rounded-2xl ">
+              <li className="px-3">Hari</li>
+              <li className="selected bg-bluePrimary text-white font-bold px-3 rounded-4xl">
+                Minggu
+              </li>
+              <li className="px-3">Bulan</li>
+              <li className="px-3">Tahun</li>
+            </ul>
+          </div>
+          {/* Text Pendapatan vs Pembayaran */}
+          <div className="mt-4">
+            <p>Pendapatan vs Perbelanjaan</p>
+          </div>
+          {/* Chart */}
+          <div>
+            <ResponsiveContainer width="100%" height={160}>
+              <BarChart data={data} barSize={10}>
+                <XAxis
+                  dataKey="month"
+                  tick={{ fill: "#64748b", fontSize: 11 }}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <YAxis hide />
+                <Tooltip
+                  contentStyle={{
+                    background: "#1e293b",
+                    border: "1px solid #334155",
+                    borderRadius: 8,
+                  }}
+                  labelStyle={{ color: "#94a3b8" }}
+                  itemStyle={{ color: "#e2e8f0" }}
+                />
+                <Bar
+                  dataKey="pendapatan"
+                  fill="#3b82f6"
+                  radius={[4, 4, 0, 0]}
+                />
+                <Bar
+                  dataKey="perbelanjaan"
+                  fill="#f43f5e"
+                  radius={[4, 4, 0, 0]}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+        ``
       </div>
     </div>
   );
