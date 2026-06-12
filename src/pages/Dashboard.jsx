@@ -8,6 +8,7 @@ import {
   TrendingDown,
   ArrowDownRight,
 } from "lucide-react";
+
 import {
   BarChart,
   Bar,
@@ -15,6 +16,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  Legend,
 } from "recharts";
 
 const data = [
@@ -158,40 +160,40 @@ const Dashboard = () => {
             <p>Pendapatan vs Perbelanjaan</p>
           </div>
           {/* Chart */}
-          <div>
-            <ResponsiveContainer width="100%" height={160}>
-              <BarChart data={data} barSize={10}>
-                <XAxis
-                  dataKey="month"
-                  tick={{ fill: "#64748b", fontSize: 11 }}
-                  axisLine={false}
-                  tickLine={false}
-                />
-                <YAxis hide />
-                <Tooltip
-                  contentStyle={{
-                    background: "#1e293b",
-                    border: "1px solid #334155",
-                    borderRadius: 8,
-                  }}
-                  labelStyle={{ color: "#94a3b8" }}
-                  itemStyle={{ color: "#e2e8f0" }}
-                />
-                <Bar
-                  dataKey="pendapatan"
-                  fill="#3b82f6"
-                  radius={[4, 4, 0, 0]}
-                />
-                <Bar
-                  dataKey="perbelanjaan"
-                  fill="#f43f5e"
-                  radius={[4, 4, 0, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart data={data} barSize={20}>
+              <XAxis
+                dataKey="month"
+                tick={{ fill: "#64748b", fontSize: 15 }}
+                axisLine={true}
+                tickLine={true}
+              />
+              <YAxis hide />
+              <Tooltip
+                contentStyle={{
+                  background: "#1e293b",
+                  border: "1px solid #334155",
+                  borderRadius: 8,
+                }}
+                labelStyle={{ color: "#94a3b8" }}
+                itemStyle={{ color: "#e2e8f0" }}
+              />
+              <Legend
+                formatter={(value) => (
+                  <span style={{ color: "#94a3b8", fontSize: 11 }}>
+                    {value === "pendapatan" ? "Pendapatan" : "Perbelanjaan"}
+                  </span>
+                )}
+              />
+              <Bar dataKey="pendapatan" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+              <Bar
+                dataKey="perbelanjaan"
+                fill="#f43f5e"
+                radius={[4, 4, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
-        ``
       </div>
     </div>
   );
