@@ -7,6 +7,7 @@ import {
   BanknoteArrowDown,
   TrendingDown,
   ArrowDownRight,
+  MoveRight,
 } from "lucide-react";
 
 import {
@@ -17,6 +18,9 @@ import {
   Tooltip,
   ResponsiveContainer,
   Legend,
+  PieChart,
+  Pie,
+  Cell,
 } from "recharts";
 
 const data = [
@@ -26,6 +30,14 @@ const data = [
   { month: "Apr", pendapatan: 7200, perbelanjaan: 4100 },
   { month: "Mei", pendapatan: 6900, perbelanjaan: 3700 },
   { month: "Jun", pendapatan: 8240, perbelanjaan: 3590 },
+];
+
+const donutData = [
+  { label: "Perumahan", pct: 38, color: "#6366f1" },
+  { label: "Makanan", pct: 22, color: "#22c55e" },
+  { label: "Pengangkutan", pct: 18, color: "#f59e0b" },
+  { label: "Utiliti", pct: 14, color: "#3b82f6" },
+  { label: "Lain-lain", pct: 8, color: "#f43f5e" },
 ];
 
 const Dashboard = () => {
@@ -140,7 +152,7 @@ const Dashboard = () => {
       {/* card second layer */}
       <div className="flex gap-5 pb-5">
         {/* Aliran kewangan */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600 w-[50%]">
           {/* Top */}
           <div className="flex items-center gap-3">
             {/* Title: Aliran Kewangan */}
@@ -193,6 +205,74 @@ const Dashboard = () => {
               />
             </BarChart>
           </ResponsiveContainer>
+        </div>
+        {/* Kategori Belanja */}
+        <div className="bg-secondary flex flex-col  rounded-md p-3 border border-slate-600 w-[50%]">
+          {/* Top layer */}
+          <div className="flex flex-col gap-2 py-2">
+            <h1 className="text-white font-bold">Kategori Belanja</h1>
+            <p>Jun 2026</p>
+          </div>
+          {/* chart */}
+          <div className="flex gap-3">
+            <ResponsiveContainer width={120} height={120}>
+              <PieChart>
+                <Pie
+                  data={donutData}
+                  dataKey="pct"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={35}
+                  outerRadius={52}
+                  strokeWidth={0}
+                >
+                  {donutData.map((d, i) => (
+                    <Cell key={i} fill={d.color} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+            {/* Legend manual */}
+            <div className="flex flex-col gap-2 flex-1">
+              {donutData.map((d, i) => (
+                <div key={i} className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full shrink-0"
+                      style={{ background: d.color }}
+                    />
+                    <span className="text-slate-400 text-xs">{d.label}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-slate-500 text-xs">{d.amount}</span>
+                    <span className="text-slate-300 text-xs font-medium">
+                      {d.pct}%
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* card third layer */}
+      <div className="flex gap-5 pb-5">
+        {/* Transaksi Terkini */}
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600 w-full">
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Transaksi Terkini</h1>
+              <p>5 transaksi terbaru</p>
+            </div>
+            <div className="flex justify-center items-center gap-3 text-bluePrimary">
+              <a
+                href="#"
+                className="flex gap-2 hover:text-blue-300 transition duration-100"
+              >
+                Lihat semua <MoveRight />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
