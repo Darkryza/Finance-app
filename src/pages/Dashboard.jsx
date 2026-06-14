@@ -207,7 +207,7 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
         {/* Kategori Belanja */}
-        <div className="bg-secondary flex flex-col  rounded-md p-3 border border-slate-600 w-[50%]">
+        <div className="bg-secondary flex flex-col  rounded-md p-3 border border-slate-600">
           {/* Top layer */}
           <div className="flex flex-col gap-2 py-2">
             <h1 className="text-white font-bold">Kategori Belanja</h1>
