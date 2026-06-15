@@ -8,6 +8,11 @@ import {
   TrendingDown,
   ArrowDownRight,
   MoveRight,
+  ShoppingCart,
+  Zap,
+  House,
+  Coffee,
+  Car,
 } from "lucide-react";
 
 import {
@@ -65,7 +70,7 @@ const Dashboard = () => {
       {/* card first layer */}
       <div className="flex gap-5 pb-5">
         {/* Card Jumlah Baki */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+        <div className="bg-secondary flex-1 flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
           {/* Symbol first row */}
           <div className="flex justify-between">
             <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
@@ -93,7 +98,7 @@ const Dashboard = () => {
           </div>
         </div>
         {/* Card Pendapatan */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+        <div className="bg-secondary flex-1 flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
           {/* Symbol first row */}
           <div className="flex justify-between">
             <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
@@ -121,7 +126,7 @@ const Dashboard = () => {
           </div>
         </div>
         {/* Card Perbelanjaan */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
+        <div className="bg-secondary flex-1 flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
           {/* Symbol first row */}
           <div className="flex justify-between">
             <div className="bg-primary p-2 rounded-lg flex justify-center items-center">
@@ -152,7 +157,7 @@ const Dashboard = () => {
       {/* card second layer */}
       <div className="flex gap-5 pb-5">
         {/* Aliran kewangan */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600 w-[50%]">
+        <div className="bg-secondary flex-1 flex flex-col justify-center item-center rounded-md p-3 border border-slate-600">
           {/* Top */}
           <div className="flex items-center gap-3">
             {/* Title: Aliran Kewangan */}
@@ -207,7 +212,7 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
         {/* Kategori Belanja */}
-        <div className="bg-secondary flex flex-col  rounded-md p-3 border border-slate-600">
+        <div className="bg-secondary flex-1 flex flex-col  rounded-md p-3 border border-slate-600">
           {/* Top layer */}
           <div className="flex flex-col gap-2 py-2">
             <h1 className="text-white font-bold">Kategori Belanja</h1>
@@ -258,7 +263,8 @@ const Dashboard = () => {
       {/* card third layer */}
       <div className="flex gap-5 pb-5">
         {/* Transaksi Terkini */}
-        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600 w-full">
+        <div className="bg-secondary flex flex-col justify-center item-center rounded-md p-3 border border-slate-600 flex-1">
+          {/* Top layer*/}
           <div className="flex justify-between">
             <div className="flex flex-col">
               <h1 className="text-white font-bold">Transaksi Terkini</h1>
@@ -271,6 +277,89 @@ const Dashboard = () => {
               >
                 Lihat semua <MoveRight />
               </a>
+            </div>
+          </div>
+          {/* Second layer */}
+          <div className="flex flex-col gap-5 p-5 mt-5">
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                {/* logo */}
+                <div className="bg-amber-800 p-3 rounded-lg flex justify-center items-center">
+                  <ShoppingCart className="text-amber-400" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold">Shoppee</h1>
+                  <p>Membeli belah</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-red-500 text-2xl">-RM128.90</span>
+                <p>Hari ini 10.23</p>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                {/* logo */}
+                <div className="bg-[#333736] p-3 rounded-lg flex justify-center items-center">
+                  <Zap className="text-[#dab01c]" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold">TNB eBilling</h1>
+                  <p>Utiliti</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-red-500 text-2xl">-RM87.50</span>
+                <p>Semalam 06.15</p>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                {/* logo */}
+                <div className="bg-[#3e427c] p-3 rounded-lg flex justify-center items-center">
+                  <House className="text-[#e5cdf4]" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold">Sewa Rumah</h1>
+                  <p>Perumahan</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-red-500 text-2xl">-RM1200.00</span>
+                <p>1 Jun</p>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                {/* logo */}
+                <div className="bg-[#343536] p-3 rounded-lg flex justify-center items-center">
+                  <Coffee className="text-[#eeb425]" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold">Zuss Coffee</h1>
+                  <p>Makanan</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-red-500 text-2xl">-RM18.50</span>
+                <p>31 Mei</p>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                {/* logo */}
+                <div className="bg-[#1c384b] p-3 rounded-lg flex justify-center items-center">
+                  <Car className="text-[#22d3ee]" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-bold">MyEG</h1>
+                  <p>Pengangkutan</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <span className="text-red-500 text-2xl">-RM52.00</span>
+                <p>30 Mei</p>
+              </div>
             </div>
           </div>
         </div>
