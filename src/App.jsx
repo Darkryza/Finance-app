@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Dashboard from "./pages/Dashboard";
+import Transaction from "./components/Transaction";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <main className="flex-1 overflow-auto">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/transaction" element={<Transaction />} />
           </Routes>
         </main>
       </div>
