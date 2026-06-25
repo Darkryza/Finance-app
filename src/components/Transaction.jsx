@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Funnel, Search } from "lucide-react";
 
 const Transaction = () => {
   return (
@@ -42,7 +42,37 @@ const Transaction = () => {
         </div>
       </div>
       {/* Third layer */}
-      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600"></div>
+      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600">
+        <div className="flex gap-2 pb-5">
+          <div className="flex-1 flex gap-2 bg-slate-950 p-3 rounded-2xl border border-slate-600">
+            <div>
+              <Search />
+            </div>
+            <input
+              type="text"
+              placeholder="Cari transaksi..."
+              className="placeholder:text-slate-400 flex-1 "
+            />
+          </div>
+          <div className="bg-slate-950 p-3 rounded-2xl border border-slate-600 flex gap-2">
+            <div>
+              <Funnel />
+            </div>
+            <span>Tapis</span>
+          </div>
+        </div>
+        <div className="flex gap-2 text-slate-400">
+          <div className="bg-bluePrimary p-3 rounded-2xl border border-slate-600 text-white font-bold">
+            Semua
+          </div>
+          <div className="bg-slate-950 p-3 rounded-2xl border border-slate-600 ">
+            Pendapatan
+          </div>
+          <div className="bg-slate-950 p-3 rounded-2xl border border-slate-600 ">
+            Semua
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
