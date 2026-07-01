@@ -74,15 +74,21 @@ const Transaction = () => {
         </div>
       </div>
       {/* Fourth layer */}
-      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-10 border border-slate-600 mb-5">
+      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-8 border border-slate-600 mb-5">
         <div className="flex justify-between">
           {/* logo and title */}
-          <div className="flex gap-2">
+          <div className="flex gap-5">
             {/* logo */}
-            <div className="bg-amber-700 p-2 rounded-md">
-              <ShoppingCart className="text-amber-400" />
+            <div className="bg-[#343137] p-2 rounded-md">
+              <ShoppingCart className="text-[#f48f3c]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Shopee</h1>
+              <p>Membeli-belah</p>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
