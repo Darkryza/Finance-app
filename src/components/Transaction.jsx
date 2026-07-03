@@ -1,4 +1,11 @@
-import { Download, Funnel, Search, ShoppingCart } from "lucide-react";
+import {
+  Download,
+  Funnel,
+  Search,
+  ShoppingCart,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
 
 const Transaction = () => {
   return (
@@ -75,7 +82,8 @@ const Transaction = () => {
       </div>
       {/* Fourth layer */}
       <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-8 border border-slate-600 mb-5">
-        <div className="flex justify-between">
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
           {/* logo and title */}
           <div className="flex gap-5">
             {/* logo */}
@@ -88,7 +96,51 @@ const Transaction = () => {
               <p>Membeli-belah</p>
             </div>
           </div>
-          
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#c15e72] font-bold">-RM128.90</h1>
+            <p className="text-end">17 Jun 10:23</p>
+          </div>
+        </div>
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
+          {/* logo and title */}
+          <div className="flex gap-5">
+            {/* logo */}
+            <div className="bg-[#1e393f] p-2 rounded-md">
+              <TrendingUp className="text-[#33885e]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Gaji Bulanan</h1>
+              <p>Pendapatan</p>
+            </div>
+          </div>
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#48d47c] font-bold">+RM8,240.00</h1>
+            <p className="text-end">16 Jun 09:00</p>
+          </div>
+        </div>
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
+          {/* logo and title */}
+          <div className="flex gap-5">
+            {/* logo */}
+            <div className="bg-[#333736] p-2 rounded-md">
+              <Zap className="text-[#dbb51a]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">TNB eBilling</h1>
+              <p>Utiliti</p>
+            </div>
+          </div>
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#c15e72] font-bold">-RM87.50</h1>
+            <p className="text-end">16 Jun 08:15</p>
+          </div>
         </div>
       </div>
     </div>
