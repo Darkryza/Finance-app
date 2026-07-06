@@ -1,6 +1,9 @@
 import {
+  Car,
+  Coffee,
   Download,
   Funnel,
+  House,
   Search,
   ShoppingCart,
   TrendingUp,
@@ -87,7 +90,7 @@ const Transaction = () => {
           {/* logo and title */}
           <div className="flex gap-5">
             {/* logo */}
-            <div className="bg-[#343137] p-2 rounded-md">
+            <div className="bg-[#343137] p-2 rounded-md flex items-center justify-center">
               <ShoppingCart className="text-[#f48f3c]" size={30} />
             </div>
             {/* title */}
@@ -107,7 +110,7 @@ const Transaction = () => {
           {/* logo and title */}
           <div className="flex gap-5">
             {/* logo */}
-            <div className="bg-[#1e393f] p-2 rounded-md">
+            <div className="bg-[#1e393f] p-2 rounded-md flex items-center justify-center">
               <TrendingUp className="text-[#33885e]" size={30} />
             </div>
             {/* title */}
@@ -127,7 +130,7 @@ const Transaction = () => {
           {/* logo and title */}
           <div className="flex gap-5">
             {/* logo */}
-            <div className="bg-[#333736] p-2 rounded-md">
+            <div className="bg-[#333736] p-2 rounded-md flex items-center justify-center">
               <Zap className="text-[#dbb51a]" size={30} />
             </div>
             {/* title */}
@@ -140,6 +143,66 @@ const Transaction = () => {
           <div className="flex flex-col">
             <h1 className="text-xl text-[#c15e72] font-bold">-RM87.50</h1>
             <p className="text-end">16 Jun 08:15</p>
+          </div>
+        </div>
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
+          {/* logo and title */}
+          <div className="flex gap-5">
+            {/* logo */}
+            <div className="bg-[#2c2e4e] p-2 rounded-md flex items-center justify-center">
+              <House className="text-[#b87ff2]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Sewa Rumah</h1>
+              <p>Perumahan</p>
+            </div>
+          </div>
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#c15e72] font-bold">-RM1,200.00</h1>
+            <p className="text-end">1 Jun 07:00</p>
+          </div>
+        </div>
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
+          {/* logo and title */}
+          <div className="flex gap-5">
+            {/* logo */}
+            <div className="bg-[#343536] p-2 rounded-md flex items-center justify-center">
+              <Coffee className="text-[#f1b825]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Zus Coffee</h1>
+              <p>Makanan</p>
+            </div>
+          </div>
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#c15e72] font-bold">-RM18.50</h1>
+            <p className="text-end">31 Mei 14:22</p>
+          </div>
+        </div>
+        {/* item forth layer */}
+        <div className="flex justify-between mb-5">
+          {/* logo and title */}
+          <div className="flex gap-5">
+            {/* logo */}
+            <div className="bg-[#1c384b] p-2 rounded-md flex items-center justify-center">
+              <Car className="text-[#22cae4]" size={30} />
+            </div>
+            {/* title */}
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">MyEG</h1>
+              <p>Pengangkutan</p>
+            </div>
+          </div>
+          {/* transaction and date */}
+          <div className="flex flex-col">
+            <h1 className="text-xl text-[#c15e72] font-bold">-RM52.00</h1>
+            <p className="text-end">30 Mei 11:05</p>
           </div>
         </div>
       </div>
