@@ -6,3 +6,8 @@
   --color-bluePrimary: var(--color-blue-500);
   --color-text: var(--color-slate-400);
 }
+
+* {
+  scrollbar-width: 8px;
+  scrollbar-color: #6366f1 #1e1b4b;
+}
