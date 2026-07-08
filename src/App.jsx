@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Dashboard from "./pages/Dashboard";
-import Transaction from "./components/Transaction";
+import Transaction from "./pages/Transaction";
+import Budget from "./pages/Budget";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/transaction" element={<Transaction />} />
+            <Route path="/budget" element={<Budget />} />
           </Routes>
         </main>
       </div>
