@@ -1,4 +1,4 @@
-import { House } from "lucide-react";
+import { Bus, House, Soup, Zap } from "lucide-react";
 
 const Budget = () => {
   return (
@@ -57,7 +57,7 @@ const Budget = () => {
           {/* second line: value */}
           <div className="flex justify-between mb-2">
             <span className="text-white font-bold text-xl">RM1,200</span>
-            <span className="text-xl">/RM1,200</span>
+            <span className="text-xl">/ RM1,200</span>
           </div>
           {/* third line: progress line */}
           <div className="flex flex-col gap-2">
@@ -70,19 +70,71 @@ const Budget = () => {
           {/* first line: logo and title */}
           <div className="flex items-center gap-5 mb-2">
             <div className="bg-[#0f172a] p-3 rounded-lg">
-              <House className="text-[#818cf8]" />
+              <Soup className="text-[#4ade80]" />
             </div>
-            <h2 className="text-lg text-[#e2e8f0]">Perumahan</h2>
+            <h2 className="text-lg text-[#e2e8f0]">Makanan</h2>
           </div>
           {/* second line: value */}
           <div className="flex justify-between mb-2">
-            <span className="text-white font-bold text-xl">RM1,200</span>
-            <span className="text-xl">/RM1,200</span>
+            <span className="text-white font-bold text-xl">RM695</span>
+            <span className="text-xl">/ RM800</span>
           </div>
           {/* third line: progress line */}
           <div className="flex flex-col gap-2">
-            <div className="w-full h-3 rounded-full bg-[#818cf8]"></div>
-            <span>100% digunakan</span>
+            <div className="w-full h-3 rounded-full bg-slate-950">
+              <div className="w-[80%] h-3 rounded-full bg-[#4ade80]"></div>
+            </div>
+            <span>87% digunakan</span>
+          </div>
+        </div>
+      </div>
+      {/* forth layer */}
+      <div className="flex gap-5">
+        {/* Pengangkutan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          {/* first line: logo and title */}
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-5">
+              <div className="bg-[#0f172a] p-3 rounded-lg">
+                <Bus className="text-[#fbbf24]" />
+              </div>
+              <h2 className="text-lg text-[#e2e8f0]">Pengangkutan</h2>
+            </div>
+            <div className="bg-[#f43f5e1a] px-3 rounded-full">
+              <p className="text-[#fb7185]">Lebih bajet</p>
+            </div>
+          </div>
+          {/* second line: value */}
+          <div className="flex justify-between mb-2">
+            <span className="text-white font-bold text-xl">RM568</span>
+            <span className="text-xl">/ RM500</span>
+          </div>
+          {/* third line: progress line */}
+          <div className="flex flex-col gap-2">
+            <div className="w-full h-3 rounded-full bg-[#f43f5e]"></div>
+            <span>114% digunakan</span>
+          </div>
+        </div>
+        {/* Utiliti */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          {/* first line: logo and title */}
+          <div className="flex items-center gap-5 mb-2">
+            <div className="bg-[#0f172a] p-3 rounded-lg">
+              <Zap className="text-[#60a5fa]" />
+            </div>
+            <h2 className="text-lg text-[#e2e8f0]">Utiliti</h2>
+          </div>
+          {/* second line: value */}
+          <div className="flex justify-between mb-2">
+            <span className="text-white font-bold text-xl">RM442</span>
+            <span className="text-xl">/ RM600</span>
+          </div>
+          {/* third line: progress line */}
+          <div className="flex flex-col gap-2">
+            <div className="w-full h-3 rounded-full bg-slate-950">
+              <div className="w-[70%] h-3 rounded-full bg-[#60a5fa]"></div>
+            </div>
+            <span>74% digunakan</span>
           </div>
         </div>
       </div>
