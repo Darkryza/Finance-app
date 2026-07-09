@@ -1,3 +1,5 @@
+import { House } from "lucide-react";
+
 const Budget = () => {
   return (
     <div className="flex flex-col px-8 pt-10 text-slate-400">
@@ -36,6 +38,52 @@ const Budget = () => {
             <div className="w-[80%] h-full bg-bluePrimary rounded-full"></div>
           </div>
           {/* description progress */}
+          <div className="mt-3">
+            <p>85% daripada bajet bulanan digunakan</p>
+          </div>
+        </div>
+      </div>
+      {/* third layer */}
+      <div className="flex gap-5">
+        {/* perumahan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          {/* first line: logo and title */}
+          <div className="flex items-center gap-5 mb-2">
+            <div className="bg-[#0f172a] p-3 rounded-lg">
+              <House className="text-[#818cf8]" />
+            </div>
+            <h2 className="text-lg text-[#e2e8f0]">Perumahan</h2>
+          </div>
+          {/* second line: value */}
+          <div className="flex justify-between mb-2">
+            <span className="text-white font-bold text-xl">RM1,200</span>
+            <span className="text-xl">/RM1,200</span>
+          </div>
+          {/* third line: progress line */}
+          <div className="flex flex-col gap-2">
+            <div className="w-full h-3 rounded-full bg-[#818cf8]"></div>
+            <span>100% digunakan</span>
+          </div>
+        </div>
+        {/* makanan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          {/* first line: logo and title */}
+          <div className="flex items-center gap-5 mb-2">
+            <div className="bg-[#0f172a] p-3 rounded-lg">
+              <House className="text-[#818cf8]" />
+            </div>
+            <h2 className="text-lg text-[#e2e8f0]">Perumahan</h2>
+          </div>
+          {/* second line: value */}
+          <div className="flex justify-between mb-2">
+            <span className="text-white font-bold text-xl">RM1,200</span>
+            <span className="text-xl">/RM1,200</span>
+          </div>
+          {/* third line: progress line */}
+          <div className="flex flex-col gap-2">
+            <div className="w-full h-3 rounded-full bg-[#818cf8]"></div>
+            <span>100% digunakan</span>
+          </div>
         </div>
       </div>
     </div>
