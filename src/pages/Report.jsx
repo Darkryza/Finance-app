@@ -17,16 +17,24 @@ const Report = () => {
         </div>
       </div>
       {/* second layer */}
-      <div className="flex gap-8 bg-secondary w-fit rounded-xl px-3 py-6">
-        <div className="bg-bluePrimary text-white font-bold rounded-md">
-          <p>3 Bulan</p>
+      <div className="flex gap-8 bg-secondary w-fit rounded-2xl p-4 mb-5">
+        <div className="cursor-pointer">
+          <span>3 Bulan</span>
         </div>
-        <div className="bg-bluePrimary text-white font-bold rounded-md">
-          <p>3 Bulan</p>
+        <div className="cursor-pointer">
+          <span className="bg-bluePrimary text-white font-bold p-3 rounded-2xl">
+            6 Bulan
+          </span>
         </div>
-        <div className="bg-bluePrimary text-white font-bold rounded-md">
-          <p>3 Bulan</p>
+        <div className="cursor-pointer">
+          <span>1 Tahun</span>
         </div>
+      </div>
+      {/* third layer */}
+      <div className="flex gap-5">
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
       </div>
     </div>
   );
