@@ -17,10 +17,16 @@ const Report = () => {
         </div>
       </div>
       {/* second layer */}
-      <div className="flex gap-8 p-2 bg-secondary">
-        <div>3 Bulan</div>
-        <div>6 Bulan</div>
-        <div>1 Tahun</div>
+      <div className="flex gap-8 bg-secondary w-fit rounded-xl px-3 py-6">
+        <div className="bg-bluePrimary text-white font-bold rounded-md">
+          <p>3 Bulan</p>
+        </div>
+        <div className="bg-bluePrimary text-white font-bold rounded-md">
+          <p>3 Bulan</p>
+        </div>
+        <div className="bg-bluePrimary text-white font-bold rounded-md">
+          <p>3 Bulan</p>
+        </div>
       </div>
     </div>
   );
