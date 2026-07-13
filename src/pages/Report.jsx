@@ -119,6 +119,63 @@ const Report = () => {
           </ResponsiveContainer>
         </div>
       </div>
+      {/* fifth layer */}
+      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+        {/* first line */}
+        <div className="flex mb-4">
+          <h1 className="text-white font-bold text-xl">
+            Perbelanjaan Mengikut Kategori
+          </h1>
+        </div>
+        {/* perumahan */}
+        <div className="flex flex-col gap-3 mb-3">
+          <div className="flex justify-between items-center">
+            <div className="flex justify-center items-center gap-3 text-lg">
+              <div className="w-4 h-4 rounded-full bg-[#6366f1]"></div>
+              <p className="text-white text-lg">Perumahan</p>
+            </div>
+            <div className="flex gap-5">
+              <p>RM1,200</p>
+              <span className="text-white">38%</span>
+            </div>
+          </div>
+          <div className="w-full h-3 bg-slate-950 rounded-full">
+            <div className="w-[30%] h-3 bg-[#6366f1] rounded-full"></div>
+          </div>
+        </div>
+        {/* Makanan */}
+        <div className="flex flex-col gap-3 mb-3">
+          <div className="flex justify-between items-center">
+            <div className="flex justify-center items-center gap-3 text-lg">
+              <div className="w-4 h-4 rounded-full bg-[#22c55e]"></div>
+              <p className="text-white text-lg">Makanan</p>
+            </div>
+            <div className="flex gap-5">
+              <p>RM895</p>
+              <span className="text-white">22%</span>
+            </div>
+          </div>
+          <div className="w-full h-3 bg-slate-950 rounded-full">
+            <div className="w-[22%] h-3 bg-[#22c55e] rounded-full"></div>
+          </div>
+        </div>
+        {/* Pengangkutan */}
+        <div className="flex flex-col gap-3 mb-3">
+          <div className="flex justify-between items-center">
+            <div className="flex justify-center items-center gap-3 text-lg">
+              <div className="w-4 h-4 rounded-full bg-[#f59e0b]"></div>
+              <p className="text-white text-lg">Pengangkutan</p>
+            </div>
+            <div className="flex gap-5">
+              <p>RM568</p>
+              <span className="text-white">18%</span>
+            </div>
+          </div>
+          <div className="w-full h-3 bg-slate-950 rounded-full">
+            <div className="w-[22%] h-3 bg-[#f59e0b] rounded-full"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
