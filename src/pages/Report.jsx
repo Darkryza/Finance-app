@@ -1,6 +1,8 @@
-import { Download } from "lucide-react";
+import { ArrowUpRight, Download, TrendingDown, TrendingUp } from "lucide-react";
+import { Line, LineChart } from "recharts";
 
 const Report = () => {
+  const data = [{}];
   return (
     <div className="flex flex-col px-8 pt-10 text-slate-400">
       {/* first layer */}
@@ -32,9 +34,55 @@ const Report = () => {
       </div>
       {/* third layer */}
       <div className="flex gap-5">
-        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
-        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
-        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5"></div>
+        {/* jumlah pendapatan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          <div className="flex gap-2">
+            <TrendingUp className="text-green-500" />
+            <span>Jumlah Pendapatan</span>
+          </div>
+          <h1 className="text-white font-bold text-2xl">RM39,440</h1>
+        </div>
+        {/* jumlah perbelanjaan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          <div className="flex gap-2">
+            <TrendingDown className="text-red-500" />
+            <span>Jumlah Perbelanjaan</span>
+          </div>
+          <h1 className="text-white font-bold text-2xl">RM21,490</h1>
+        </div>
+        {/* kadar simpanan */}
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+          <div className="flex gap-2">
+            <ArrowUpRight className="text-blue-400" />
+            <span>Kadar Simpanan</span>
+          </div>
+          <h1 className="text-white font-bold text-2xl">46%</h1>
+        </div>
+      </div>
+      {/* forth layer */}
+      <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
+        {/* Top line */}
+        <div className="flex justify-between">
+          <div className="flex flex-col">
+            <h1 className="text-white font-bold text-xl">
+              Trend Pendapatan vs Perbelanjaan
+            </h1>
+            <p>6 Bulan terakhir</p>
+          </div>
+          <div className="flex gap-5">
+            <div className="flex justify-center items-center gap-2">
+              <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
+              <p>Pendapatan</p>
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <div className="w-4 h-4 bg-red-400 rounded-full"></div>
+              <p>Perbelanjaan</p>
+            </div>
+          </div>
+        </div>
+        <LineChart>
+          <Line />
+        </LineChart>
       </div>
     </div>
   );
