@@ -1,13 +1,5 @@
 import { ArrowUpRight, Download, TrendingDown, TrendingUp } from "lucide-react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const Report = () => {
   const data = [
@@ -77,7 +69,7 @@ const Report = () => {
       {/* forth layer */}
       <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-lg p-5 border border-slate-600 mb-5">
         {/* Top line */}
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-5">
           <div className="flex flex-col">
             <h1 className="text-white font-bold text-xl">
               Trend Pendapatan vs Perbelanjaan
@@ -95,59 +87,36 @@ const Report = () => {
             </div>
           </div>
         </div>
-        <div>
-          <LineChart
-            style={{
-              width: "100%",
-              maxWidth: "700px",
-              height: "100%",
-              maxHeight: "70vh",
-              aspectRatio: 1.618,
-            }}
-            responsive
-            data={data}
-            margin={{
-              top: 5,
-              right: 0,
-              left: 0,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid
-              strokeDasharray="3 3"
-              stroke="var(--color-border-3)"
-            />
-            <XAxis dataKey="name" stroke="var(--color-text-3)" />
-            <YAxis width="auto" stroke="var(--color-text-3)" />
-            <Tooltip
-              cursor={{
-                stroke: "var(--color-border-2)",
-              }}
-              contentStyle={{
-                backgroundColor: "var(--color-surface-raised)",
-                borderColor: "var(--color-border-2)",
-              }}
-            />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="pv"
-              stroke="var(--color-chart-1)"
-              dot={{
-                fill: "var(--color-surface-base)",
-              }}
-              activeDot={{ r: 8, stroke: "var(--color-surface-base)" }}
-            />
-            <Line
-              type="monotone"
-              dataKey="uv"
-              stroke="var(--color-chart-2)"
-              dot={{
-                fill: "var(--color-surface-base)",
-              }}
-              activeDot={{ stroke: "var(--color-surface-base)" }}
-            />
-          </LineChart>
+        <div className="w-full h-72">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data}>
+              <XAxis dataKey="bulan" stroke="#94a3b8" />
+
+              <Tooltip
+                cursor={{ stroke: "#475569" }}
+                contentStyle={{
+                  backgroundColor: "#1e293b",
+                  borderColor: "#334155",
+                }}
+              />
+              <Line
+                type="monotone"
+                dataKey="pendapatan"
+                stroke="#3b82f6"
+                strokeWidth={2.5}
+                dot={{ fill: "#3b82f6", r: 4 }}
+                activeDot={{ r: 6 }}
+              />
+              <Line
+                type="monotone"
+                dataKey="perbelanjaan"
+                stroke="#f87171"
+                strokeWidth={2.5}
+                dot={{ fill: "#f87171", r: 4 }}
+                activeDot={{ r: 6 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </div>
