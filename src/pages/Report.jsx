@@ -172,7 +172,7 @@ const Report = () => {
             </div>
           </div>
           <div className="w-full h-3 bg-slate-950 rounded-full">
-            <div className="w-[22%] h-3 bg-[#f59e0b] rounded-full"></div>
+            <div className="w-[18%] h-3 bg-[#f59e0b] rounded-full"></div>
           </div>
         </div>
       </div>
