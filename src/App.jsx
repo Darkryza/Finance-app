@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
 import Report from "./pages/Report";
+import Transfer from "./pages/Transfer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/transaction" element={<Transaction />} />
             <Route path="/budget" element={<Budget />} />
             <Route path="/report" element={<Report />} />
+            <Route path="/transfer" element={<Transfer />} />
           </Routes>
         </main>
       </div>
