@@ -1,4 +1,11 @@
-import { ArrowUpDown, ChevronDown, PiggyBank, Wallet } from "lucide-react";
+import {
+  ArrowLeftRight,
+  ArrowUpDown,
+  ChevronDown,
+  PiggyBank,
+  TrendingUp,
+  Wallet,
+} from "lucide-react";
 
 const Transfer = () => {
   return (
@@ -13,7 +20,7 @@ const Transfer = () => {
         <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5">
           {/* top line */}
           <div className="mb-3">
-            <h1 className="text-white font-bold text-x;">
+            <h1 className="text-white font-bold text-xl">
               Buat Pindahan Baharu
             </h1>
           </div>
@@ -87,7 +94,57 @@ const Transfer = () => {
             </span>
           </div>
         </div>
-        <div className="bg-secondary w-[40%] flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5"></div>
+        <div className="bg-secondary w-[40%] flex flex-col gap-2 rounded-2xl p-5 border border-slate-600 mb-5">
+          {/* first line */}
+          <div className="mb-5">
+            <h1 className="text-white font-bold text-xl">Akaun Saya</h1>
+          </div>
+          {/* second line */}
+          <div className="flex gap-4 mb-3">
+            <div className="p-3 bg-primary rounded-xl">
+              <Wallet className="text-blue-500" />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Akaun Semasa</h1>
+              <span>RM24,830.50</span>
+            </div>
+          </div>
+          {/* third line */}
+          <div className="flex gap-4 mb-3">
+            <div className="p-3 bg-primary rounded-xl">
+              <PiggyBank className="text-green-400" />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Simpanan</h1>
+              <span>RM15,200.00</span>
+            </div>
+          </div>
+          {/* forth line */}
+          <div className="flex gap-4 mb-3">
+            <div className="p-3 bg-primary rounded-xl">
+              <TrendingUp className="text-purple-500" />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold">Pelaburan</h1>
+              <span>RM8,950.75</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* third layer */}
+      <div className="bg-secondary flex-1 flex flex-col gap-2 rounded-2xl p-5 border border-slate-600 mb-5">
+        {/* first line */}
+        <h1 className="text-white font-bold text-xl mb-5">Pindahan Terkini</h1>
+        {/* transaction */}
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between">
+            <div className="flex gap=3">
+              <div className="p-3 bg-[#3b82f61a] rounded-xl">
+                <ArrowLeftRight className="text-[#60a5fa]" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
