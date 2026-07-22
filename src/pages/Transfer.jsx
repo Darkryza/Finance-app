@@ -1,7 +1,10 @@
 import {
   ArrowLeftRight,
   ArrowUpDown,
+  Check,
   ChevronDown,
+  Clock3,
+  MoveRight,
   PiggyBank,
   TrendingUp,
   Wallet,
@@ -101,7 +104,7 @@ const Transfer = () => {
           </div>
           {/* second line */}
           <div className="flex gap-4 mb-3">
-            <div className="p-3 bg-primary rounded-xl">
+            <div className="p-3 bg-primary rounded-xl flex justify-center items-center">
               <Wallet className="text-blue-500" />
             </div>
             <div className="flex flex-col">
@@ -111,7 +114,7 @@ const Transfer = () => {
           </div>
           {/* third line */}
           <div className="flex gap-4 mb-3">
-            <div className="p-3 bg-primary rounded-xl">
+            <div className="p-3 bg-primary rounded-xl flex justify-center items-center">
               <PiggyBank className="text-green-400" />
             </div>
             <div className="flex flex-col">
@@ -121,7 +124,7 @@ const Transfer = () => {
           </div>
           {/* forth line */}
           <div className="flex gap-4 mb-3">
-            <div className="p-3 bg-primary rounded-xl">
+            <div className="p-3 bg-primary rounded-xl flex justify-center items-center">
               <TrendingUp className="text-purple-500" />
             </div>
             <div className="flex flex-col">
@@ -137,10 +140,51 @@ const Transfer = () => {
         <h1 className="text-white font-bold text-xl mb-5">Pindahan Terkini</h1>
         {/* transaction */}
         <div className="flex flex-col gap-2">
-          <div className="flex justify-between">
-            <div className="flex gap=3">
-              <div className="p-3 bg-[#3b82f61a] rounded-xl">
+          <div className="flex justify-between mb-5">
+            <div className="flex gap-5">
+              <div className="flex justify-center items-center p-3 bg-[#3b82f61a] rounded-xl">
                 <ArrowLeftRight className="text-[#60a5fa]" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="flex justify-center items-center gap-2 text-white font-medium">
+                  Akaun Semasa <MoveRight />
+                  Simpanan
+                </h1>
+                <p className="flex gap-3 items-center">
+                  <Clock3 size={20} />
+                  16 Jun 2026
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 justify-center items-center">
+              <h1 className=" text-white font-medium">RM500</h1>
+              <div className="flex text-sm items-center justify-center text-green-500">
+                <Check size={20} />
+                <p>Selesai</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between mb-5">
+            <div className="flex gap-5">
+              <div className="flex justify-center items-center p-3 bg-[#3b82f61a] rounded-xl">
+                <ArrowLeftRight className="text-[#60a5fa]" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="flex justify-center items-center gap-2 text-white font-medium">
+                  Simpanan <MoveRight />
+                  Pelaburan
+                </h1>
+                <p className="flex gap-3 items-center">
+                  <Clock3 size={20} />
+                  10 Jun 2026
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 justify-center items-center">
+              <h1 className=" text-white font-medium">RM1,000</h1>
+              <div className="flex text-sm items-center justify-center text-green-500">
+                <Check size={20} />
+                <p>Selesai</p>
               </div>
             </div>
           </div>
