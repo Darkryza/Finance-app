@@ -5,6 +5,7 @@ import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
 import Report from "./pages/Report";
 import Transfer from "./pages/Transfer";
+import Saving from "./pages/Saving";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/budget" element={<Budget />} />
             <Route path="/report" element={<Report />} />
             <Route path="/transfer" element={<Transfer />} />
+            <Route path="/saving" element={<Saving />} />
           </Routes>
         </main>
       </div>
