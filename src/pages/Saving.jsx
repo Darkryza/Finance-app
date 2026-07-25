@@ -1,4 +1,11 @@
-import { PiggyBank, Plus } from "lucide-react";
+import {
+  Car,
+  GraduationCap,
+  House,
+  PiggyBank,
+  Plane,
+  Plus,
+} from "lucide-react";
 
 const Saving = () => {
   return (
@@ -37,6 +44,112 @@ const Saving = () => {
           <div className="flex flex-col gap-2">
             <span>Progress</span>
             <span className="text-green-400 text-3xl font-bold">52%</span>
+          </div>
+        </div>
+      </div>
+      {/* third layer */}
+      <div className="flex gap-3">
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5 flex-wrap">
+          <div className="flex flex-col gap-5">
+            <div className="flex justify-between items-center">
+              <div className="flex gap-5">
+                <div className="p-3 bg-primary rounded-xl">
+                  <Plane size={40} className="text-blue-400" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-medium text-lg">
+                    Percutian Jepun
+                  </h1>
+                  <p>Sasaran Dis 2026</p>
+                </div>
+              </div>
+              <h1 className="text-white font-medium text-xl">53%</h1>
+            </div>
+            <div className="w-full h-4 rounded-full bg-primary">
+              <div className="w-[53%] h-4 rounded-full bg-blue-400"></div>
+            </div>
+            <div className="flex justify-between">
+              <h1 className="text-xl text-white font-bold">RM4,200</h1>
+              <p>daripada RM8000</p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5 flex-wrap">
+          <div className="flex flex-col gap-5">
+            <div className="flex justify-between items-center">
+              <div className="flex gap-5">
+                <div className="p-3 bg-primary rounded-xl">
+                  <Car size={40} className="text-green-500" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-medium text-lg">
+                    Kereta Baharu
+                  </h1>
+                  <p>Sasaran Jun 2027</p>
+                </div>
+              </div>
+              <h1 className="text-white font-medium text-xl">46%</h1>
+            </div>
+            <div className="w-full h-4 rounded-full bg-primary">
+              <div className="w-[46%] h-4 rounded-full bg-green-500"></div>
+            </div>
+            <div className="flex justify-between">
+              <h1 className="text-xl text-white font-bold">RM18,500</h1>
+              <p>daripada RM40,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* forth layer */}
+      <div className="flex gap-3">
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5 flex-wrap">
+          <div className="flex flex-col gap-5">
+            <div className="flex justify-between items-center">
+              <div className="flex gap-5">
+                <div className="p-3 bg-primary rounded-xl">
+                  <GraduationCap size={40} className="text-purple-500" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-medium text-lg">
+                    Dana Pendidikan
+                  </h1>
+                  <p>Sasaran Ogos 2027</p>
+                </div>
+              </div>
+              <h1 className="text-white font-medium text-xl">65%</h1>
+            </div>
+            <div className="w-full h-4 rounded-full bg-primary">
+              <div className="w-[65%] h-4 rounded-full bg-purple-500"></div>
+            </div>
+            <div className="flex justify-between">
+              <h1 className="text-xl text-white font-bold">RM9,800</h1>
+              <p>daripada RM15,000</p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-secondary flex-1 flex flex-col gap-2 justify-center item-center rounded-2xl p-5 border border-slate-600 mb-5 flex-wrap">
+          <div className="flex flex-col gap-5">
+            <div className="flex justify-between items-center">
+              <div className="flex gap-5">
+                <div className="p-3 bg-primary rounded-xl">
+                  <House size={40} className="text-orange-400" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-white font-medium text-lg">
+                    Bayaran Awal Rumah
+                  </h1>
+                  <p>Sasaran Mac 2028</p>
+                </div>
+              </div>
+              <h1 className="text-white font-medium text-xl">53%</h1>
+            </div>
+            <div className="w-full h-4 rounded-full bg-primary">
+              <div className="w-[53%] h-4 rounded-full bg-orange-400"></div>
+            </div>
+            <div className="flex justify-between">
+              <h1 className="text-xl text-white font-bold">RM32,000</h1>
+              <p>daripada RM60,000</p>
+            </div>
           </div>
         </div>
       </div>
