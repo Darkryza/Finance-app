@@ -83,7 +83,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/investment"
               className="flex gap-3 p-2 w-full text-slate-300 hover:bg-[rgba(255,255,255,0.05)] hover:text-blue-500 transition duration-100 rounded-xl"
             >
               <ChartLine />
