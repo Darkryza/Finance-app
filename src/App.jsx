@@ -7,6 +7,7 @@ import Report from "./pages/Report";
 import Transfer from "./pages/Transfer";
 import Saving from "./pages/Saving";
 import Investment from "./pages/Investment";
+import Setting from "./pages/Setting";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/transfer" element={<Transfer />} />
             <Route path="/saving" element={<Saving />} />
             <Route path="/investment" element={<Investment />} />
+            <Route path="/setting" element={<Setting />} />
           </Routes>
         </main>
       </div>
