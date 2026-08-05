@@ -14,7 +14,7 @@ const AndroidSwitch = styled(Switch)(({ theme }) => ({
       transform: "translateX(22px)",
       color: "#fff",
       "& + .MuiSwitch-track": {
-        backgroundColor: theme.palette.mode === "dark" ? "#00e676" : "#2e7d32", // Android active color
+        backgroundColor: "#2563eb", // Android active color
         opacity: 1,
         border: 0,
       },

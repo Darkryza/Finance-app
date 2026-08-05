@@ -37,10 +37,18 @@ const Setting = () => {
             <h2 className="text-white font-medium">Notifikasi</h2>
           </div>
           {/* second line */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mb-3">
             <div className="flex flex-col">
               <span className="text-white">Notifikasi E-mel</span>
               <p>Ringkasan mingguan</p>
+            </div>
+            <AndroidSwitch />
+          </div>
+          {/* third line */}
+          <div className="flex justify-between items-center mb-3">
+            <div className="flex flex-col">
+              <span className="text-white">Push Notifikasi</span>
+              <p>Amaran segera</p>
             </div>
             <AndroidSwitch />
           </div>
